@@ -1,0 +1,1191 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65736ECE171BA27900B973E9 /* bin2bcs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65736EBD171B2D4400B973E9 /* bin2bcs.cpp */; };
+		65736ECF171BA63700B973E9 /* DATA002.BIN in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65736EBC171B2BD200B973E9 /* DATA002.BIN */; };
+		65736EDE171BADBF00B973E9 /* bc2pngs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65AFFAD7171B22EE001F555E /* bc2pngs.cpp */; };
+		65736EE0171BADBF00B973E9 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65736D35171B264D00B973E9 /* libpng16.a */; };
+		65736EE2171BADBF00B973E9 /* test.bc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65736EBA171B275300B973E9 /* test.bc */; };
+		65736EEA171BB99E00B973E9 /* DATA001.BIN in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65736EE9171BB97A00B973E9 /* DATA001.BIN */; };
+		65736EEB171BC5F100B973E9 /* bcs2pngs.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65736EE8171BADEF00B973E9 /* bcs2pngs.sh */; };
+		65736EEC171BC5F400B973E9 /* bcs2pngs.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65736EE8171BADEF00B973E9 /* bcs2pngs.sh */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		65736EC2171BA26B00B973E9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				65736ECF171BA63700B973E9 /* DATA002.BIN in CopyFiles */,
+				65736EEA171BB99E00B973E9 /* DATA001.BIN in CopyFiles */,
+				65736EEB171BC5F100B973E9 /* bcs2pngs.sh in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65736EE1171BADBF00B973E9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				65736EE2171BADBF00B973E9 /* test.bc in CopyFiles */,
+				65736EEC171BC5F400B973E9 /* bcs2pngs.sh in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		65736D1D171B264D00B973E9 /* arm_init.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = arm_init.Plo; sourceTree = "<group>"; };
+		65736D1E171B264D00B973E9 /* filter_neon.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = filter_neon.Plo; sourceTree = "<group>"; };
+		65736D1F171B264D00B973E9 /* png.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = png.Plo; sourceTree = "<group>"; };
+		65736D20171B264D00B973E9 /* pngerror.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngerror.Plo; sourceTree = "<group>"; };
+		65736D21171B264D00B973E9 /* pngget.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngget.Plo; sourceTree = "<group>"; };
+		65736D22171B264D00B973E9 /* pngmem.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngmem.Plo; sourceTree = "<group>"; };
+		65736D23171B264D00B973E9 /* pngpread.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngpread.Plo; sourceTree = "<group>"; };
+		65736D24171B264D00B973E9 /* pngread.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngread.Plo; sourceTree = "<group>"; };
+		65736D25171B264D00B973E9 /* pngrio.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngrio.Plo; sourceTree = "<group>"; };
+		65736D26171B264D00B973E9 /* pngrtran.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngrtran.Plo; sourceTree = "<group>"; };
+		65736D27171B264D00B973E9 /* pngrutil.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngrutil.Plo; sourceTree = "<group>"; };
+		65736D28171B264D00B973E9 /* pngset.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngset.Plo; sourceTree = "<group>"; };
+		65736D29171B264D00B973E9 /* pngstest.Po */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngstest.Po; sourceTree = "<group>"; };
+		65736D2A171B264D00B973E9 /* pngtest.Po */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngtest.Po; sourceTree = "<group>"; };
+		65736D2B171B264D00B973E9 /* pngtrans.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngtrans.Plo; sourceTree = "<group>"; };
+		65736D2C171B264D00B973E9 /* pngunknown.Po */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngunknown.Po; sourceTree = "<group>"; };
+		65736D2D171B264D00B973E9 /* pngvalid.Po */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngvalid.Po; sourceTree = "<group>"; };
+		65736D2E171B264D00B973E9 /* pngwio.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngwio.Plo; sourceTree = "<group>"; };
+		65736D2F171B264D00B973E9 /* pngwrite.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngwrite.Plo; sourceTree = "<group>"; };
+		65736D30171B264D00B973E9 /* pngwtran.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngwtran.Plo; sourceTree = "<group>"; };
+		65736D31171B264D00B973E9 /* pngwutil.Plo */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngwutil.Plo; sourceTree = "<group>"; };
+		65736D35171B264D00B973E9 /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpng16.a; sourceTree = "<group>"; };
+		65736D48171B264D00B973E9 /* aclocal.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = aclocal.m4; sourceTree = "<group>"; };
+		65736D49171B264D00B973E9 /* ANNOUNCE */ = {isa = PBXFileReference; lastKnownFileType = text; path = ANNOUNCE; sourceTree = "<group>"; };
+		65736D4B171B264D00B973E9 /* arm_init.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = arm_init.c; sourceTree = "<group>"; };
+		65736D4C171B264D00B973E9 /* filter_neon.S */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = filter_neon.S; sourceTree = "<group>"; };
+		65736D4D171B264D00B973E9 /* autogen.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = autogen.sh; sourceTree = "<group>"; };
+		65736D4E171B264D00B973E9 /* CHANGES */ = {isa = PBXFileReference; lastKnownFileType = text; path = CHANGES; sourceTree = "<group>"; };
+		65736D4F171B264D00B973E9 /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		65736D50171B264D00B973E9 /* config.guess */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = config.guess; sourceTree = "<group>"; };
+		65736D51171B264D00B973E9 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		65736D52171B264D00B973E9 /* config.h.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.h.in; sourceTree = "<group>"; };
+		65736D53171B264D00B973E9 /* config.log */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.log; sourceTree = "<group>"; };
+		65736D54171B264D00B973E9 /* config.status */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = config.status; sourceTree = "<group>"; };
+		65736D55171B264D00B973E9 /* config.sub */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = config.sub; sourceTree = "<group>"; };
+		65736D56171B264D00B973E9 /* configure */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = configure; sourceTree = "<group>"; };
+		65736D57171B264D00B973E9 /* configure.ac */ = {isa = PBXFileReference; lastKnownFileType = text; path = configure.ac; sourceTree = "<group>"; };
+		65736D5A171B264D00B973E9 /* iccfrompng.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = iccfrompng.c; sourceTree = "<group>"; };
+		65736D5B171B264D00B973E9 /* pngpixel.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngpixel.c; sourceTree = "<group>"; };
+		65736D5C171B264D00B973E9 /* pngtopng.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngtopng.c; sourceTree = "<group>"; };
+		65736D5D171B264D00B973E9 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		65736D5F171B264D00B973E9 /* COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		65736D60171B264D00B973E9 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		65736D61171B264D00B973E9 /* Makefile.mingw32 */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.mingw32; sourceTree = "<group>"; };
+		65736D62171B264D00B973E9 /* Makefile.sgi */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.sgi; sourceTree = "<group>"; };
+		65736D63171B264D00B973E9 /* Makefile.unx */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.unx; sourceTree = "<group>"; };
+		65736D64171B264D00B973E9 /* Makefile.w32 */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.w32; sourceTree = "<group>"; };
+		65736D65171B264D00B973E9 /* makevms.com */ = {isa = PBXFileReference; lastKnownFileType = text; path = makevms.com; sourceTree = "<group>"; };
+		65736D66171B264D00B973E9 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		65736D67171B264D00B973E9 /* readpng.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = readpng.c; sourceTree = "<group>"; };
+		65736D68171B264D00B973E9 /* readpng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = readpng.h; sourceTree = "<group>"; };
+		65736D69171B264D00B973E9 /* readpng2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = readpng2.c; sourceTree = "<group>"; };
+		65736D6A171B264D00B973E9 /* readpng2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = readpng2.h; sourceTree = "<group>"; };
+		65736D6B171B264D00B973E9 /* readppm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = readppm.c; sourceTree = "<group>"; };
+		65736D6C171B264D00B973E9 /* rpng-win.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "rpng-win.c"; sourceTree = "<group>"; };
+		65736D6D171B264D00B973E9 /* rpng-x.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "rpng-x.c"; sourceTree = "<group>"; };
+		65736D6E171B264D00B973E9 /* rpng2-win.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "rpng2-win.c"; sourceTree = "<group>"; };
+		65736D6F171B264D00B973E9 /* rpng2-x.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "rpng2-x.c"; sourceTree = "<group>"; };
+		65736D70171B264D00B973E9 /* toucan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toucan.png; sourceTree = "<group>"; };
+		65736D71171B264D00B973E9 /* wpng.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = wpng.c; sourceTree = "<group>"; };
+		65736D72171B264D00B973E9 /* writepng.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = writepng.c; sourceTree = "<group>"; };
+		65736D73171B264D00B973E9 /* writepng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = writepng.h; sourceTree = "<group>"; };
+		65736D75171B264D00B973E9 /* fakepng.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fakepng.c; sourceTree = "<group>"; };
+		65736D76171B264D00B973E9 /* gentests.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = gentests.sh; sourceTree = "<group>"; };
+		65736D77171B264D00B973E9 /* makepng.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = makepng.c; sourceTree = "<group>"; };
+		65736D78171B264D00B973E9 /* pngstest.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngstest.c; sourceTree = "<group>"; };
+		65736D79171B264D00B973E9 /* pngunknown.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngunknown.c; sourceTree = "<group>"; };
+		65736D7A171B264D00B973E9 /* pngvalid.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngvalid.c; sourceTree = "<group>"; };
+		65736D7B171B264D00B973E9 /* readpng.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = readpng.c; sourceTree = "<group>"; };
+		65736D7C171B264D00B973E9 /* tarith.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tarith.c; sourceTree = "<group>"; };
+		65736D7D171B264D00B973E9 /* timepng.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = timepng.c; sourceTree = "<group>"; };
+		65736D80171B264D00B973E9 /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		65736D81171B264D00B973E9 /* pngusr.dfa */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngusr.dfa; sourceTree = "<group>"; };
+		65736D82171B264D00B973E9 /* pngusr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pngusr.h; sourceTree = "<group>"; };
+		65736D83171B264D00B973E9 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		65736D85171B264D00B973E9 /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		65736D86171B264D00B973E9 /* pngusr.dfa */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngusr.dfa; sourceTree = "<group>"; };
+		65736D87171B264D00B973E9 /* pngusr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pngusr.h; sourceTree = "<group>"; };
+		65736D88171B264D00B973E9 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		65736D8A171B264D00B973E9 /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		65736D8B171B264D00B973E9 /* pngusr.dfa */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngusr.dfa; sourceTree = "<group>"; };
+		65736D8C171B264D00B973E9 /* pngusr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pngusr.h; sourceTree = "<group>"; };
+		65736D8D171B264D00B973E9 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		65736D8E171B264D00B973E9 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		65736D90171B264D00B973E9 /* makefile.std */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.std; sourceTree = "<group>"; };
+		65736D91171B264D00B973E9 /* makefile.tc3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.tc3; sourceTree = "<group>"; };
+		65736D92171B264D00B973E9 /* makevms.com */ = {isa = PBXFileReference; lastKnownFileType = text; path = makevms.com; sourceTree = "<group>"; };
+		65736D93171B264D00B973E9 /* png2pnm.bat */ = {isa = PBXFileReference; lastKnownFileType = text; path = png2pnm.bat; sourceTree = "<group>"; };
+		65736D94171B264D00B973E9 /* png2pnm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = png2pnm.c; sourceTree = "<group>"; };
+		65736D95171B264D00B973E9 /* png2pnm.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = png2pnm.sh; sourceTree = "<group>"; };
+		65736D96171B264D00B973E9 /* pngminus.bat */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngminus.bat; sourceTree = "<group>"; };
+		65736D97171B264D00B973E9 /* pngminus.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = pngminus.sh; sourceTree = "<group>"; };
+		65736D98171B264D00B973E9 /* pnm2png.bat */ = {isa = PBXFileReference; lastKnownFileType = text; path = pnm2png.bat; sourceTree = "<group>"; };
+		65736D99171B264D00B973E9 /* pnm2png.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pnm2png.c; sourceTree = "<group>"; };
+		65736D9A171B264D00B973E9 /* pnm2png.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = pnm2png.sh; sourceTree = "<group>"; };
+		65736D9B171B264D00B973E9 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		65736D9D171B264D00B973E9 /* basn0g01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn0g01.png; sourceTree = "<group>"; };
+		65736D9E171B264D00B973E9 /* basn0g02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn0g02.png; sourceTree = "<group>"; };
+		65736D9F171B264D00B973E9 /* basn0g04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn0g04.png; sourceTree = "<group>"; };
+		65736DA0171B264D00B973E9 /* basn0g08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn0g08.png; sourceTree = "<group>"; };
+		65736DA1171B264D00B973E9 /* basn0g16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn0g16.png; sourceTree = "<group>"; };
+		65736DA2171B264D00B973E9 /* basn2c08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn2c08.png; sourceTree = "<group>"; };
+		65736DA3171B264D00B973E9 /* basn2c16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn2c16.png; sourceTree = "<group>"; };
+		65736DA4171B264D00B973E9 /* basn3p01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn3p01.png; sourceTree = "<group>"; };
+		65736DA5171B264D00B973E9 /* basn3p02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn3p02.png; sourceTree = "<group>"; };
+		65736DA6171B264D00B973E9 /* basn3p04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn3p04.png; sourceTree = "<group>"; };
+		65736DA7171B264D00B973E9 /* basn3p08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn3p08.png; sourceTree = "<group>"; };
+		65736DA8171B264D00B973E9 /* basn4a08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn4a08.png; sourceTree = "<group>"; };
+		65736DA9171B264D00B973E9 /* basn4a16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn4a16.png; sourceTree = "<group>"; };
+		65736DAA171B264D00B973E9 /* basn6a08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn6a08.png; sourceTree = "<group>"; };
+		65736DAB171B264D00B973E9 /* basn6a16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basn6a16.png; sourceTree = "<group>"; };
+		65736DAC171B264D00B973E9 /* ftbbn0g01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftbbn0g01.png; sourceTree = "<group>"; };
+		65736DAD171B264D00B973E9 /* ftbbn0g02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftbbn0g02.png; sourceTree = "<group>"; };
+		65736DAE171B264D00B973E9 /* ftbbn0g04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftbbn0g04.png; sourceTree = "<group>"; };
+		65736DAF171B264D00B973E9 /* ftbbn2c16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftbbn2c16.png; sourceTree = "<group>"; };
+		65736DB0171B264D00B973E9 /* ftbbn3p08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftbbn3p08.png; sourceTree = "<group>"; };
+		65736DB1171B264D00B973E9 /* ftbgn2c16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftbgn2c16.png; sourceTree = "<group>"; };
+		65736DB2171B264D00B973E9 /* ftbgn3p08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftbgn3p08.png; sourceTree = "<group>"; };
+		65736DB3171B264D00B973E9 /* ftbrn2c08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftbrn2c08.png; sourceTree = "<group>"; };
+		65736DB4171B264D00B973E9 /* ftbwn0g16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftbwn0g16.png; sourceTree = "<group>"; };
+		65736DB5171B264D00B973E9 /* ftbwn3p08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftbwn3p08.png; sourceTree = "<group>"; };
+		65736DB6171B264D00B973E9 /* ftbyn3p08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftbyn3p08.png; sourceTree = "<group>"; };
+		65736DB7171B264D00B973E9 /* ftp0n0g08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftp0n0g08.png; sourceTree = "<group>"; };
+		65736DB8171B264D00B973E9 /* ftp0n2c08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftp0n2c08.png; sourceTree = "<group>"; };
+		65736DB9171B264D00B973E9 /* ftp0n3p08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftp0n3p08.png; sourceTree = "<group>"; };
+		65736DBA171B264D00B973E9 /* ftp1n3p08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftp1n3p08.png; sourceTree = "<group>"; };
+		65736DBB171B264D00B973E9 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		65736DBC171B264D00B973E9 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		65736DBE171B264D00B973E9 /* checksum-icc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "checksum-icc.c"; sourceTree = "<group>"; };
+		65736DBF171B264D00B973E9 /* chkfmt */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = chkfmt; sourceTree = "<group>"; };
+		65736DC0171B264D00B973E9 /* cvtcolor.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cvtcolor.c; sourceTree = "<group>"; };
+		65736DC1171B264D00B973E9 /* intgamma.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = intgamma.sh; sourceTree = "<group>"; };
+		65736DC2171B264D00B973E9 /* makesRGB.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = makesRGB.c; sourceTree = "<group>"; };
+		65736DC3171B264D00B973E9 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		65736DC4171B264D00B973E9 /* sRGB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sRGB.h; sourceTree = "<group>"; };
+		65736DC6171B264D00B973E9 /* cexcept.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cexcept.h; sourceTree = "<group>"; };
+		65736DC7171B264D00B973E9 /* PngFile.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = PngFile.c; sourceTree = "<group>"; };
+		65736DC8171B264D00B973E9 /* PngFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PngFile.h; sourceTree = "<group>"; };
+		65736DC9171B264D00B973E9 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		65736DCA171B264D00B973E9 /* resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
+		65736DCB171B264D00B973E9 /* VisualPng.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = VisualPng.c; sourceTree = "<group>"; };
+		65736DCC171B264D00B973E9 /* VisualPng.dsp */ = {isa = PBXFileReference; lastKnownFileType = text; path = VisualPng.dsp; sourceTree = "<group>"; };
+		65736DCD171B264D00B973E9 /* VisualPng.dsw */ = {isa = PBXFileReference; lastKnownFileType = text; path = VisualPng.dsw; sourceTree = "<group>"; };
+		65736DCE171B264D00B973E9 /* VisualPng.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = VisualPng.ico; sourceTree = "<group>"; };
+		65736DCF171B264D00B973E9 /* VisualPng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VisualPng.png; sourceTree = "<group>"; };
+		65736DD0171B264D00B973E9 /* VisualPng.rc */ = {isa = PBXFileReference; lastKnownFileType = text; path = VisualPng.rc; sourceTree = "<group>"; };
+		65736DD1171B264D00B973E9 /* depcomp */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = depcomp; sourceTree = "<group>"; };
+		65736DD2171B264D00B973E9 /* example.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = example.c; sourceTree = "<group>"; };
+		65736DD3171B264D00B973E9 /* INSTALL */ = {isa = PBXFileReference; lastKnownFileType = text; path = INSTALL; sourceTree = "<group>"; };
+		65736DD4171B264D00B973E9 /* install-sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-sh"; sourceTree = "<group>"; };
+		65736DD5171B264D00B973E9 /* libpng-config */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "libpng-config"; sourceTree = "<group>"; };
+		65736DD6171B264D00B973E9 /* libpng-config.in */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "libpng-config.in"; sourceTree = "<group>"; };
+		65736DD7171B264D00B973E9 /* libpng-manual.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libpng-manual.txt"; sourceTree = "<group>"; };
+		65736DD8171B264D00B973E9 /* libpng.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = libpng.3; sourceTree = "<group>"; };
+		65736DD9171B264D00B973E9 /* libpng.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = libpng.pc; sourceTree = "<group>"; };
+		65736DDA171B264D00B973E9 /* libpng.pc.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = libpng.pc.in; sourceTree = "<group>"; };
+		65736DDF171B264E00B973E9 /* libpngpf.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = libpngpf.3; sourceTree = "<group>"; };
+		65736DE0171B264E00B973E9 /* libtool */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = libtool; sourceTree = "<group>"; };
+		65736DE1171B264E00B973E9 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		65736DE2171B264E00B973E9 /* ltmain.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ltmain.sh; sourceTree = "<group>"; };
+		65736DE3171B264E00B973E9 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		65736DE4171B264E00B973E9 /* Makefile.am */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		65736DE5171B264E00B973E9 /* Makefile.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		65736DE6171B264E00B973E9 /* missing */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = missing; sourceTree = "<group>"; };
+		65736DE7171B264E00B973E9 /* png.5 */ = {isa = PBXFileReference; lastKnownFileType = text; path = png.5; sourceTree = "<group>"; };
+		65736DE8171B264E00B973E9 /* png.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = png.c; sourceTree = "<group>"; };
+		65736DE9171B264E00B973E9 /* png.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = png.h; sourceTree = "<group>"; };
+		65736DEC171B264E00B973E9 /* pngbar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pngbar.jpg; sourceTree = "<group>"; };
+		65736DED171B264E00B973E9 /* pngbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pngbar.png; sourceTree = "<group>"; };
+		65736DEE171B264E00B973E9 /* pngconf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pngconf.h; sourceTree = "<group>"; };
+		65736DEF171B264E00B973E9 /* pngdebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pngdebug.h; sourceTree = "<group>"; };
+		65736DF0171B264E00B973E9 /* pngerror.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngerror.c; sourceTree = "<group>"; };
+		65736DF3171B264E00B973E9 /* pngget.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngget.c; sourceTree = "<group>"; };
+		65736DF6171B264E00B973E9 /* pnginfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pnginfo.h; sourceTree = "<group>"; };
+		65736DFA171B264E00B973E9 /* pngmem.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngmem.c; sourceTree = "<group>"; };
+		65736DFD171B264E00B973E9 /* pngnow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pngnow.png; sourceTree = "<group>"; };
+		65736DFE171B264E00B973E9 /* pngpread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngpread.c; sourceTree = "<group>"; };
+		65736E02171B264E00B973E9 /* pngpriv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pngpriv.h; sourceTree = "<group>"; };
+		65736E03171B264E00B973E9 /* pngread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngread.c; sourceTree = "<group>"; };
+		65736E06171B264E00B973E9 /* pngrio.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngrio.c; sourceTree = "<group>"; };
+		65736E09171B264E00B973E9 /* pngrtran.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngrtran.c; sourceTree = "<group>"; };
+		65736E0C171B264E00B973E9 /* pngrutil.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngrutil.c; sourceTree = "<group>"; };
+		65736E0F171B264E00B973E9 /* pngset.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngset.c; sourceTree = "<group>"; };
+		65736E12171B264E00B973E9 /* pngstruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pngstruct.h; sourceTree = "<group>"; };
+		65736E13171B264E00B973E9 /* pngtest.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngtest.c; sourceTree = "<group>"; };
+		65736E14171B264E00B973E9 /* pngtest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pngtest.png; sourceTree = "<group>"; };
+		65736E15171B264E00B973E9 /* pngtrans.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngtrans.c; sourceTree = "<group>"; };
+		65736E18171B264E00B973E9 /* pngusr.dfa */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngusr.dfa; sourceTree = "<group>"; };
+		65736E19171B264E00B973E9 /* pngwio.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngwio.c; sourceTree = "<group>"; };
+		65736E1C171B264E00B973E9 /* pngwrite.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngwrite.c; sourceTree = "<group>"; };
+		65736E1F171B264E00B973E9 /* pngwtran.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngwtran.c; sourceTree = "<group>"; };
+		65736E22171B264E00B973E9 /* pngwutil.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pngwutil.c; sourceTree = "<group>"; };
+		65736E27171B264E00B973E9 /* libpng.tgt */ = {isa = PBXFileReference; lastKnownFileType = text; path = libpng.tgt; sourceTree = "<group>"; };
+		65736E28171B264E00B973E9 /* libpng.wpj */ = {isa = PBXFileReference; lastKnownFileType = text; path = libpng.wpj; sourceTree = "<group>"; };
+		65736E29171B264E00B973E9 /* pngconfig.mak */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = pngconfig.mak; sourceTree = "<group>"; };
+		65736E2A171B264E00B973E9 /* pngstest.tgt */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngstest.tgt; sourceTree = "<group>"; };
+		65736E2B171B264E00B973E9 /* pngtest.tgt */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngtest.tgt; sourceTree = "<group>"; };
+		65736E2C171B264E00B973E9 /* pngvalid.tgt */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngvalid.tgt; sourceTree = "<group>"; };
+		65736E2E171B264E00B973E9 /* libpng.sln */ = {isa = PBXFileReference; lastKnownFileType = text; path = libpng.sln; sourceTree = "<group>"; };
+		65736E2F171B264E00B973E9 /* libpng.vcproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = libpng.vcproj; sourceTree = "<group>"; };
+		65736E30171B264E00B973E9 /* pngtest.vcproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = pngtest.vcproj; sourceTree = "<group>"; };
+		65736E31171B264E00B973E9 /* PRJ0041.mak */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = PRJ0041.mak; sourceTree = "<group>"; };
+		65736E32171B264E00B973E9 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		65736E33171B264E00B973E9 /* README_zlib.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README_zlib.txt; sourceTree = "<group>"; };
+		65736E34171B264E00B973E9 /* zlib.vcproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = zlib.vcproj; sourceTree = "<group>"; };
+		65736E37171B264E00B973E9 /* libpng.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = libpng.vcxproj; sourceTree = "<group>"; };
+		65736E39171B264E00B973E9 /* pnglibconf.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = pnglibconf.vcxproj; sourceTree = "<group>"; };
+		65736E3B171B264E00B973E9 /* pngstest.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = pngstest.vcxproj; sourceTree = "<group>"; };
+		65736E3D171B264E00B973E9 /* pngtest.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = pngtest.vcxproj; sourceTree = "<group>"; };
+		65736E3F171B264E00B973E9 /* pngunknown.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = pngunknown.vcxproj; sourceTree = "<group>"; };
+		65736E41171B264E00B973E9 /* pngvalid.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = pngvalid.vcxproj; sourceTree = "<group>"; };
+		65736E42171B264E00B973E9 /* readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		65736E43171B264E00B973E9 /* vstudio.sln */ = {isa = PBXFileReference; lastKnownFileType = text; path = vstudio.sln; sourceTree = "<group>"; };
+		65736E44171B264E00B973E9 /* WARNING */ = {isa = PBXFileReference; lastKnownFileType = text; path = WARNING; sourceTree = "<group>"; };
+		65736E46171B264E00B973E9 /* zlib.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = zlib.vcxproj; sourceTree = "<group>"; };
+		65736E47171B264E00B973E9 /* zlib.props */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = zlib.props; sourceTree = "<group>"; };
+		65736E48171B264E00B973E9 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		65736E4A171B264E00B973E9 /* checksym.awk */ = {isa = PBXFileReference; lastKnownFileType = text; path = checksym.awk; sourceTree = "<group>"; };
+		65736E4B171B264E00B973E9 /* def.dfn */ = {isa = PBXFileReference; lastKnownFileType = text; path = def.dfn; sourceTree = "<group>"; };
+		65736E4C171B264E00B973E9 /* descrip.mms */ = {isa = PBXFileReference; lastKnownFileType = text; path = descrip.mms; sourceTree = "<group>"; };
+		65736E4D171B264E00B973E9 /* dfn.awk */ = {isa = PBXFileReference; lastKnownFileType = text; path = dfn.awk; sourceTree = "<group>"; };
+		65736E4E171B264E00B973E9 /* intprefix.dfn */ = {isa = PBXFileReference; lastKnownFileType = text; path = intprefix.dfn; sourceTree = "<group>"; };
+		65736E4F171B264E00B973E9 /* libpng-config-body.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libpng-config-body.in"; sourceTree = "<group>"; };
+		65736E50171B264E00B973E9 /* libpng-config-head.in */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "libpng-config-head.in"; sourceTree = "<group>"; };
+		65736E51171B264E00B973E9 /* libpng.pc.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = libpng.pc.in; sourceTree = "<group>"; };
+		65736E52171B264E00B973E9 /* libtool.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = libtool.m4; sourceTree = "<group>"; };
+		65736E53171B264E00B973E9 /* ltoptions.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = ltoptions.m4; sourceTree = "<group>"; };
+		65736E54171B264E00B973E9 /* ltsugar.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = ltsugar.m4; sourceTree = "<group>"; };
+		65736E55171B264E00B973E9 /* ltversion.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = ltversion.m4; sourceTree = "<group>"; };
+		65736E56171B264E00B973E9 /* lt~obsolete.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "lt~obsolete.m4"; sourceTree = "<group>"; };
+		65736E57171B264E00B973E9 /* macro.lst */ = {isa = PBXFileReference; lastKnownFileType = text; path = macro.lst; sourceTree = "<group>"; };
+		65736E58171B264E00B973E9 /* makefile.32sunu */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.32sunu; sourceTree = "<group>"; };
+		65736E59171B264E00B973E9 /* makefile.64sunu */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.64sunu; sourceTree = "<group>"; };
+		65736E5A171B264E00B973E9 /* makefile.acorn */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.acorn; sourceTree = "<group>"; };
+		65736E5B171B264E00B973E9 /* makefile.aix */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.aix; sourceTree = "<group>"; };
+		65736E5C171B264E00B973E9 /* makefile.amiga */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.amiga; sourceTree = "<group>"; };
+		65736E5D171B264E00B973E9 /* makefile.atari */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.atari; sourceTree = "<group>"; };
+		65736E5E171B264E00B973E9 /* makefile.bc32 */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.bc32; sourceTree = "<group>"; };
+		65736E5F171B264E00B973E9 /* makefile.beos */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.beos; sourceTree = "<group>"; };
+		65736E60171B264E00B973E9 /* makefile.bor */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.bor; sourceTree = "<group>"; };
+		65736E61171B264E00B973E9 /* makefile.cegcc */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.cegcc; sourceTree = "<group>"; };
+		65736E62171B264E00B973E9 /* makefile.darwin */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.darwin; sourceTree = "<group>"; };
+		65736E63171B264E00B973E9 /* makefile.dec */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.dec; sourceTree = "<group>"; };
+		65736E64171B264E00B973E9 /* makefile.dj2 */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.dj2; sourceTree = "<group>"; };
+		65736E65171B264E00B973E9 /* makefile.elf */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.elf; sourceTree = "<group>"; };
+		65736E66171B264E00B973E9 /* makefile.freebsd */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.freebsd; sourceTree = "<group>"; };
+		65736E67171B264E00B973E9 /* makefile.gcc */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.gcc; sourceTree = "<group>"; };
+		65736E68171B264E00B973E9 /* makefile.hp64 */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.hp64; sourceTree = "<group>"; };
+		65736E69171B264E00B973E9 /* makefile.hpgcc */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.hpgcc; sourceTree = "<group>"; };
+		65736E6A171B264E00B973E9 /* makefile.hpux */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.hpux; sourceTree = "<group>"; };
+		65736E6B171B264E00B973E9 /* makefile.ibmc */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.ibmc; sourceTree = "<group>"; };
+		65736E6C171B264E00B973E9 /* makefile.intel */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.intel; sourceTree = "<group>"; };
+		65736E6D171B264E00B973E9 /* makefile.knr */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.knr; sourceTree = "<group>"; };
+		65736E6E171B264E00B973E9 /* makefile.linux */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.linux; sourceTree = "<group>"; };
+		65736E6F171B264E00B973E9 /* makefile.mips */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.mips; sourceTree = "<group>"; };
+		65736E70171B264E00B973E9 /* makefile.msc */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.msc; sourceTree = "<group>"; };
+		65736E71171B264E00B973E9 /* makefile.msys */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.msys; sourceTree = "<group>"; };
+		65736E72171B264E00B973E9 /* makefile.ne12bsd */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.ne12bsd; sourceTree = "<group>"; };
+		65736E73171B264E00B973E9 /* makefile.netbsd */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.netbsd; sourceTree = "<group>"; };
+		65736E74171B264E00B973E9 /* makefile.openbsd */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.openbsd; sourceTree = "<group>"; };
+		65736E75171B264E00B973E9 /* makefile.sco */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.sco; sourceTree = "<group>"; };
+		65736E76171B264E00B973E9 /* makefile.sggcc */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.sggcc; sourceTree = "<group>"; };
+		65736E77171B264E00B973E9 /* makefile.sgi */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.sgi; sourceTree = "<group>"; };
+		65736E78171B264E00B973E9 /* makefile.so9 */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.so9; sourceTree = "<group>"; };
+		65736E79171B264E00B973E9 /* makefile.solaris */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.solaris; sourceTree = "<group>"; };
+		65736E7A171B264E00B973E9 /* makefile.solaris-x86 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "makefile.solaris-x86"; sourceTree = "<group>"; };
+		65736E7B171B264E00B973E9 /* makefile.std */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.std; sourceTree = "<group>"; };
+		65736E7C171B264E00B973E9 /* makefile.sunos */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.sunos; sourceTree = "<group>"; };
+		65736E7D171B264E00B973E9 /* makefile.tc3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.tc3; sourceTree = "<group>"; };
+		65736E7E171B264E00B973E9 /* makefile.vcwin32 */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.vcwin32; sourceTree = "<group>"; };
+		65736E7F171B264E00B973E9 /* makevms.com */ = {isa = PBXFileReference; lastKnownFileType = text; path = makevms.com; sourceTree = "<group>"; };
+		65736E80171B264E00B973E9 /* options.awk */ = {isa = PBXFileReference; lastKnownFileType = text; path = options.awk; sourceTree = "<group>"; };
+		65736E81171B264E00B973E9 /* pnglibconf.dfa */ = {isa = PBXFileReference; lastKnownFileType = text; path = pnglibconf.dfa; sourceTree = "<group>"; };
+		65736E82171B264E00B973E9 /* pnglibconf.h.prebuilt */ = {isa = PBXFileReference; lastKnownFileType = text; path = pnglibconf.h.prebuilt; sourceTree = "<group>"; };
+		65736E83171B264E00B973E9 /* pnglibconf.mak */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = pnglibconf.mak; sourceTree = "<group>"; };
+		65736E84171B264E00B973E9 /* pngwin.rc */ = {isa = PBXFileReference; lastKnownFileType = text; path = pngwin.rc; sourceTree = "<group>"; };
+		65736E85171B264E00B973E9 /* prefix.dfn */ = {isa = PBXFileReference; lastKnownFileType = text; path = prefix.dfn; sourceTree = "<group>"; };
+		65736E86171B264E00B973E9 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		65736E87171B264E00B973E9 /* SCOPTIONS.ppc */ = {isa = PBXFileReference; lastKnownFileType = text; path = SCOPTIONS.ppc; sourceTree = "<group>"; };
+		65736E88171B264E00B973E9 /* smakefile.ppc */ = {isa = PBXFileReference; lastKnownFileType = text; path = smakefile.ppc; sourceTree = "<group>"; };
+		65736E89171B264E00B973E9 /* sym.dfn */ = {isa = PBXFileReference; lastKnownFileType = text; path = sym.dfn; sourceTree = "<group>"; };
+		65736E8A171B264E00B973E9 /* sym.out */ = {isa = PBXFileReference; lastKnownFileType = text; path = sym.out; sourceTree = "<group>"; };
+		65736E8B171B264E00B973E9 /* symbols.def */ = {isa = PBXFileReference; lastKnownFileType = text; path = symbols.def; sourceTree = "<group>"; };
+		65736E8C171B264E00B973E9 /* symbols.dfn */ = {isa = PBXFileReference; lastKnownFileType = text; path = symbols.dfn; sourceTree = "<group>"; };
+		65736E8D171B264E00B973E9 /* vers.dfn */ = {isa = PBXFileReference; lastKnownFileType = text; path = vers.dfn; sourceTree = "<group>"; };
+		65736E8E171B264E00B973E9 /* stamp-h1 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "stamp-h1"; sourceTree = "<group>"; };
+		65736E8F171B264E00B973E9 /* test-driver */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "test-driver"; sourceTree = "<group>"; };
+		65736E91171B264E00B973E9 /* pngstest */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = pngstest; sourceTree = "<group>"; };
+		65736E92171B264E00B973E9 /* pngstest-0g01 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-0g01"; sourceTree = "<group>"; };
+		65736E93171B264E00B973E9 /* pngstest-0g02 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-0g02"; sourceTree = "<group>"; };
+		65736E94171B264E00B973E9 /* pngstest-0g04 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-0g04"; sourceTree = "<group>"; };
+		65736E95171B264E00B973E9 /* pngstest-0g08 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-0g08"; sourceTree = "<group>"; };
+		65736E96171B264E00B973E9 /* pngstest-0g16 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-0g16"; sourceTree = "<group>"; };
+		65736E97171B264E00B973E9 /* pngstest-2c08 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-2c08"; sourceTree = "<group>"; };
+		65736E98171B264E00B973E9 /* pngstest-2c16 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-2c16"; sourceTree = "<group>"; };
+		65736E99171B264E00B973E9 /* pngstest-3p01 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-3p01"; sourceTree = "<group>"; };
+		65736E9A171B264E00B973E9 /* pngstest-3p02 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-3p02"; sourceTree = "<group>"; };
+		65736E9B171B264E00B973E9 /* pngstest-3p04 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-3p04"; sourceTree = "<group>"; };
+		65736E9C171B264E00B973E9 /* pngstest-3p08 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-3p08"; sourceTree = "<group>"; };
+		65736E9D171B264E00B973E9 /* pngstest-4a08 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-4a08"; sourceTree = "<group>"; };
+		65736E9E171B264E00B973E9 /* pngstest-4a16 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-4a16"; sourceTree = "<group>"; };
+		65736E9F171B264E00B973E9 /* pngstest-6a08 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-6a08"; sourceTree = "<group>"; };
+		65736EA0171B264E00B973E9 /* pngstest-6a16 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-6a16"; sourceTree = "<group>"; };
+		65736EA1171B264E00B973E9 /* pngstest-error */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngstest-error"; sourceTree = "<group>"; };
+		65736EA2171B264E00B973E9 /* pngtest */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = pngtest; sourceTree = "<group>"; };
+		65736EA3171B264E00B973E9 /* pngunknown-discard */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngunknown-discard"; sourceTree = "<group>"; };
+		65736EA4171B264E00B973E9 /* pngunknown-IDAT */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngunknown-IDAT"; sourceTree = "<group>"; };
+		65736EA5171B264E00B973E9 /* pngunknown-if-safe */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngunknown-if-safe"; sourceTree = "<group>"; };
+		65736EA6171B264E00B973E9 /* pngunknown-sAPI */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngunknown-sAPI"; sourceTree = "<group>"; };
+		65736EA7171B264E00B973E9 /* pngunknown-save */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngunknown-save"; sourceTree = "<group>"; };
+		65736EA8171B264E00B973E9 /* pngunknown-sTER */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngunknown-sTER"; sourceTree = "<group>"; };
+		65736EA9171B264E00B973E9 /* pngunknown-vpAg */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngunknown-vpAg"; sourceTree = "<group>"; };
+		65736EAA171B264E00B973E9 /* pngvalid-gamma-16-to-8 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngvalid-gamma-16-to-8"; sourceTree = "<group>"; };
+		65736EAB171B264E00B973E9 /* pngvalid-gamma-alpha-mode */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngvalid-gamma-alpha-mode"; sourceTree = "<group>"; };
+		65736EAC171B264E00B973E9 /* pngvalid-gamma-background */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngvalid-gamma-background"; sourceTree = "<group>"; };
+		65736EAD171B264E00B973E9 /* pngvalid-gamma-expand16-alpha-mode */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngvalid-gamma-expand16-alpha-mode"; sourceTree = "<group>"; };
+		65736EAE171B264E00B973E9 /* pngvalid-gamma-expand16-background */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngvalid-gamma-expand16-background"; sourceTree = "<group>"; };
+		65736EAF171B264E00B973E9 /* pngvalid-gamma-expand16-transform */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngvalid-gamma-expand16-transform"; sourceTree = "<group>"; };
+		65736EB0171B264E00B973E9 /* pngvalid-gamma-sbit */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngvalid-gamma-sbit"; sourceTree = "<group>"; };
+		65736EB1171B264E00B973E9 /* pngvalid-gamma-threshold */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngvalid-gamma-threshold"; sourceTree = "<group>"; };
+		65736EB2171B264E00B973E9 /* pngvalid-gamma-transform */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngvalid-gamma-transform"; sourceTree = "<group>"; };
+		65736EB3171B264E00B973E9 /* pngvalid-progressive-interlace-size */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngvalid-progressive-interlace-size"; sourceTree = "<group>"; };
+		65736EB4171B264E00B973E9 /* pngvalid-progressive-interlace-standard */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngvalid-progressive-interlace-standard"; sourceTree = "<group>"; };
+		65736EB5171B264E00B973E9 /* pngvalid-progressive-interlace-transform */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngvalid-progressive-interlace-transform"; sourceTree = "<group>"; };
+		65736EB6171B264E00B973E9 /* pngvalid-progressive-standard */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngvalid-progressive-standard"; sourceTree = "<group>"; };
+		65736EB7171B264E00B973E9 /* pngvalid-standard */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pngvalid-standard"; sourceTree = "<group>"; };
+		65736EB8171B264E00B973E9 /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
+		65736EBA171B275300B973E9 /* test.bc */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.bc; sourceTree = "<group>"; };
+		65736EBC171B2BD200B973E9 /* DATA002.BIN */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = DATA002.BIN; sourceTree = "<group>"; };
+		65736EBD171B2D4400B973E9 /* bin2bcs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bin2bcs.cpp; sourceTree = "<group>"; };
+		65736EBF171B2D8B00B973E9 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		65736EC4171BA26B00B973E9 /* bin2bcs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bin2bcs; sourceTree = BUILT_PRODUCTS_DIR; };
+		65736EE6171BADBF00B973E9 /* bc2pngs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bc2pngs; sourceTree = BUILT_PRODUCTS_DIR; };
+		65736EE8171BADEF00B973E9 /* bcs2pngs.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = bcs2pngs.sh; sourceTree = "<group>"; };
+		65736EE9171BB97A00B973E9 /* DATA001.BIN */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = DATA001.BIN; sourceTree = "<group>"; };
+		65AFFAD7171B22EE001F555E /* bc2pngs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bc2pngs.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65736EC1171BA26B00B973E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65736EDF171BADBF00B973E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65736EE0171BADBF00B973E9 /* libpng16.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65736D1B171B264D00B973E9 /* libpng-1.6.1 */ = {
+			isa = PBXGroup;
+			children = (
+				65736D1C171B264D00B973E9 /* .deps */,
+				65736D32171B264D00B973E9 /* .libs */,
+				65736D48171B264D00B973E9 /* aclocal.m4 */,
+				65736D49171B264D00B973E9 /* ANNOUNCE */,
+				65736D4A171B264D00B973E9 /* arm */,
+				65736D4D171B264D00B973E9 /* autogen.sh */,
+				65736D4E171B264D00B973E9 /* CHANGES */,
+				65736D4F171B264D00B973E9 /* CMakeLists.txt */,
+				65736D50171B264D00B973E9 /* config.guess */,
+				65736D51171B264D00B973E9 /* config.h */,
+				65736D52171B264D00B973E9 /* config.h.in */,
+				65736D53171B264D00B973E9 /* config.log */,
+				65736D54171B264D00B973E9 /* config.status */,
+				65736D55171B264D00B973E9 /* config.sub */,
+				65736D56171B264D00B973E9 /* configure */,
+				65736D57171B264D00B973E9 /* configure.ac */,
+				65736D58171B264D00B973E9 /* contrib */,
+				65736DD1171B264D00B973E9 /* depcomp */,
+				65736DD2171B264D00B973E9 /* example.c */,
+				65736DD3171B264D00B973E9 /* INSTALL */,
+				65736DD4171B264D00B973E9 /* install-sh */,
+				65736DD5171B264D00B973E9 /* libpng-config */,
+				65736DD6171B264D00B973E9 /* libpng-config.in */,
+				65736DD7171B264D00B973E9 /* libpng-manual.txt */,
+				65736DD8171B264D00B973E9 /* libpng.3 */,
+				65736DD9171B264D00B973E9 /* libpng.pc */,
+				65736DDA171B264D00B973E9 /* libpng.pc.in */,
+				65736DDF171B264E00B973E9 /* libpngpf.3 */,
+				65736DE0171B264E00B973E9 /* libtool */,
+				65736DE1171B264E00B973E9 /* LICENSE */,
+				65736DE2171B264E00B973E9 /* ltmain.sh */,
+				65736DE3171B264E00B973E9 /* Makefile */,
+				65736DE4171B264E00B973E9 /* Makefile.am */,
+				65736DE5171B264E00B973E9 /* Makefile.in */,
+				65736DE6171B264E00B973E9 /* missing */,
+				65736DE7171B264E00B973E9 /* png.5 */,
+				65736DE8171B264E00B973E9 /* png.c */,
+				65736DE9171B264E00B973E9 /* png.h */,
+				65736DEC171B264E00B973E9 /* pngbar.jpg */,
+				65736DED171B264E00B973E9 /* pngbar.png */,
+				65736DEE171B264E00B973E9 /* pngconf.h */,
+				65736DEF171B264E00B973E9 /* pngdebug.h */,
+				65736DF0171B264E00B973E9 /* pngerror.c */,
+				65736DF3171B264E00B973E9 /* pngget.c */,
+				65736DF6171B264E00B973E9 /* pnginfo.h */,
+				65736DFA171B264E00B973E9 /* pngmem.c */,
+				65736DFD171B264E00B973E9 /* pngnow.png */,
+				65736DFE171B264E00B973E9 /* pngpread.c */,
+				65736E02171B264E00B973E9 /* pngpriv.h */,
+				65736E03171B264E00B973E9 /* pngread.c */,
+				65736E06171B264E00B973E9 /* pngrio.c */,
+				65736E09171B264E00B973E9 /* pngrtran.c */,
+				65736E0C171B264E00B973E9 /* pngrutil.c */,
+				65736E0F171B264E00B973E9 /* pngset.c */,
+				65736E12171B264E00B973E9 /* pngstruct.h */,
+				65736E13171B264E00B973E9 /* pngtest.c */,
+				65736E14171B264E00B973E9 /* pngtest.png */,
+				65736E15171B264E00B973E9 /* pngtrans.c */,
+				65736E18171B264E00B973E9 /* pngusr.dfa */,
+				65736E19171B264E00B973E9 /* pngwio.c */,
+				65736E1C171B264E00B973E9 /* pngwrite.c */,
+				65736E1F171B264E00B973E9 /* pngwtran.c */,
+				65736E22171B264E00B973E9 /* pngwutil.c */,
+				65736E25171B264E00B973E9 /* projects */,
+				65736E48171B264E00B973E9 /* README */,
+				65736E49171B264E00B973E9 /* scripts */,
+				65736E8E171B264E00B973E9 /* stamp-h1 */,
+				65736E8F171B264E00B973E9 /* test-driver */,
+				65736E90171B264E00B973E9 /* tests */,
+				65736EB8171B264E00B973E9 /* TODO */,
+			);
+			path = "libpng-1.6.1";
+			sourceTree = "<group>";
+		};
+		65736D1C171B264D00B973E9 /* .deps */ = {
+			isa = PBXGroup;
+			children = (
+				65736D1D171B264D00B973E9 /* arm_init.Plo */,
+				65736D1E171B264D00B973E9 /* filter_neon.Plo */,
+				65736D1F171B264D00B973E9 /* png.Plo */,
+				65736D20171B264D00B973E9 /* pngerror.Plo */,
+				65736D21171B264D00B973E9 /* pngget.Plo */,
+				65736D22171B264D00B973E9 /* pngmem.Plo */,
+				65736D23171B264D00B973E9 /* pngpread.Plo */,
+				65736D24171B264D00B973E9 /* pngread.Plo */,
+				65736D25171B264D00B973E9 /* pngrio.Plo */,
+				65736D26171B264D00B973E9 /* pngrtran.Plo */,
+				65736D27171B264D00B973E9 /* pngrutil.Plo */,
+				65736D28171B264D00B973E9 /* pngset.Plo */,
+				65736D29171B264D00B973E9 /* pngstest.Po */,
+				65736D2A171B264D00B973E9 /* pngtest.Po */,
+				65736D2B171B264D00B973E9 /* pngtrans.Plo */,
+				65736D2C171B264D00B973E9 /* pngunknown.Po */,
+				65736D2D171B264D00B973E9 /* pngvalid.Po */,
+				65736D2E171B264D00B973E9 /* pngwio.Plo */,
+				65736D2F171B264D00B973E9 /* pngwrite.Plo */,
+				65736D30171B264D00B973E9 /* pngwtran.Plo */,
+				65736D31171B264D00B973E9 /* pngwutil.Plo */,
+			);
+			path = .deps;
+			sourceTree = "<group>";
+		};
+		65736D32171B264D00B973E9 /* .libs */ = {
+			isa = PBXGroup;
+			children = (
+				65736D35171B264D00B973E9 /* libpng16.a */,
+			);
+			path = .libs;
+			sourceTree = "<group>";
+		};
+		65736D4A171B264D00B973E9 /* arm */ = {
+			isa = PBXGroup;
+			children = (
+				65736D4B171B264D00B973E9 /* arm_init.c */,
+				65736D4C171B264D00B973E9 /* filter_neon.S */,
+			);
+			path = arm;
+			sourceTree = "<group>";
+		};
+		65736D58171B264D00B973E9 /* contrib */ = {
+			isa = PBXGroup;
+			children = (
+				65736D59171B264D00B973E9 /* examples */,
+				65736D5E171B264D00B973E9 /* gregbook */,
+				65736D74171B264D00B973E9 /* libtests */,
+				65736D7E171B264D00B973E9 /* pngminim */,
+				65736D8F171B264D00B973E9 /* pngminus */,
+				65736D9C171B264D00B973E9 /* pngsuite */,
+				65736DBC171B264D00B973E9 /* README.txt */,
+				65736DBD171B264D00B973E9 /* tools */,
+				65736DC5171B264D00B973E9 /* visupng */,
+			);
+			path = contrib;
+			sourceTree = "<group>";
+		};
+		65736D59171B264D00B973E9 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				65736D5A171B264D00B973E9 /* iccfrompng.c */,
+				65736D5B171B264D00B973E9 /* pngpixel.c */,
+				65736D5C171B264D00B973E9 /* pngtopng.c */,
+				65736D5D171B264D00B973E9 /* README.txt */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		65736D5E171B264D00B973E9 /* gregbook */ = {
+			isa = PBXGroup;
+			children = (
+				65736D5F171B264D00B973E9 /* COPYING */,
+				65736D60171B264D00B973E9 /* LICENSE */,
+				65736D61171B264D00B973E9 /* Makefile.mingw32 */,
+				65736D62171B264D00B973E9 /* Makefile.sgi */,
+				65736D63171B264D00B973E9 /* Makefile.unx */,
+				65736D64171B264D00B973E9 /* Makefile.w32 */,
+				65736D65171B264D00B973E9 /* makevms.com */,
+				65736D66171B264D00B973E9 /* README */,
+				65736D67171B264D00B973E9 /* readpng.c */,
+				65736D68171B264D00B973E9 /* readpng.h */,
+				65736D69171B264D00B973E9 /* readpng2.c */,
+				65736D6A171B264D00B973E9 /* readpng2.h */,
+				65736D6B171B264D00B973E9 /* readppm.c */,
+				65736D6C171B264D00B973E9 /* rpng-win.c */,
+				65736D6D171B264D00B973E9 /* rpng-x.c */,
+				65736D6E171B264D00B973E9 /* rpng2-win.c */,
+				65736D6F171B264D00B973E9 /* rpng2-x.c */,
+				65736D70171B264D00B973E9 /* toucan.png */,
+				65736D71171B264D00B973E9 /* wpng.c */,
+				65736D72171B264D00B973E9 /* writepng.c */,
+				65736D73171B264D00B973E9 /* writepng.h */,
+			);
+			path = gregbook;
+			sourceTree = "<group>";
+		};
+		65736D74171B264D00B973E9 /* libtests */ = {
+			isa = PBXGroup;
+			children = (
+				65736D75171B264D00B973E9 /* fakepng.c */,
+				65736D76171B264D00B973E9 /* gentests.sh */,
+				65736D77171B264D00B973E9 /* makepng.c */,
+				65736D78171B264D00B973E9 /* pngstest.c */,
+				65736D79171B264D00B973E9 /* pngunknown.c */,
+				65736D7A171B264D00B973E9 /* pngvalid.c */,
+				65736D7B171B264D00B973E9 /* readpng.c */,
+				65736D7C171B264D00B973E9 /* tarith.c */,
+				65736D7D171B264D00B973E9 /* timepng.c */,
+			);
+			path = libtests;
+			sourceTree = "<group>";
+		};
+		65736D7E171B264D00B973E9 /* pngminim */ = {
+			isa = PBXGroup;
+			children = (
+				65736D7F171B264D00B973E9 /* decoder */,
+				65736D84171B264D00B973E9 /* encoder */,
+				65736D89171B264D00B973E9 /* preader */,
+				65736D8E171B264D00B973E9 /* README */,
+			);
+			path = pngminim;
+			sourceTree = "<group>";
+		};
+		65736D7F171B264D00B973E9 /* decoder */ = {
+			isa = PBXGroup;
+			children = (
+				65736D80171B264D00B973E9 /* makefile */,
+				65736D81171B264D00B973E9 /* pngusr.dfa */,
+				65736D82171B264D00B973E9 /* pngusr.h */,
+				65736D83171B264D00B973E9 /* README */,
+			);
+			path = decoder;
+			sourceTree = "<group>";
+		};
+		65736D84171B264D00B973E9 /* encoder */ = {
+			isa = PBXGroup;
+			children = (
+				65736D85171B264D00B973E9 /* makefile */,
+				65736D86171B264D00B973E9 /* pngusr.dfa */,
+				65736D87171B264D00B973E9 /* pngusr.h */,
+				65736D88171B264D00B973E9 /* README */,
+			);
+			path = encoder;
+			sourceTree = "<group>";
+		};
+		65736D89171B264D00B973E9 /* preader */ = {
+			isa = PBXGroup;
+			children = (
+				65736D8A171B264D00B973E9 /* makefile */,
+				65736D8B171B264D00B973E9 /* pngusr.dfa */,
+				65736D8C171B264D00B973E9 /* pngusr.h */,
+				65736D8D171B264D00B973E9 /* README */,
+			);
+			path = preader;
+			sourceTree = "<group>";
+		};
+		65736D8F171B264D00B973E9 /* pngminus */ = {
+			isa = PBXGroup;
+			children = (
+				65736D90171B264D00B973E9 /* makefile.std */,
+				65736D91171B264D00B973E9 /* makefile.tc3 */,
+				65736D92171B264D00B973E9 /* makevms.com */,
+				65736D93171B264D00B973E9 /* png2pnm.bat */,
+				65736D94171B264D00B973E9 /* png2pnm.c */,
+				65736D95171B264D00B973E9 /* png2pnm.sh */,
+				65736D96171B264D00B973E9 /* pngminus.bat */,
+				65736D97171B264D00B973E9 /* pngminus.sh */,
+				65736D98171B264D00B973E9 /* pnm2png.bat */,
+				65736D99171B264D00B973E9 /* pnm2png.c */,
+				65736D9A171B264D00B973E9 /* pnm2png.sh */,
+				65736D9B171B264D00B973E9 /* README */,
+			);
+			path = pngminus;
+			sourceTree = "<group>";
+		};
+		65736D9C171B264D00B973E9 /* pngsuite */ = {
+			isa = PBXGroup;
+			children = (
+				65736D9D171B264D00B973E9 /* basn0g01.png */,
+				65736D9E171B264D00B973E9 /* basn0g02.png */,
+				65736D9F171B264D00B973E9 /* basn0g04.png */,
+				65736DA0171B264D00B973E9 /* basn0g08.png */,
+				65736DA1171B264D00B973E9 /* basn0g16.png */,
+				65736DA2171B264D00B973E9 /* basn2c08.png */,
+				65736DA3171B264D00B973E9 /* basn2c16.png */,
+				65736DA4171B264D00B973E9 /* basn3p01.png */,
+				65736DA5171B264D00B973E9 /* basn3p02.png */,
+				65736DA6171B264D00B973E9 /* basn3p04.png */,
+				65736DA7171B264D00B973E9 /* basn3p08.png */,
+				65736DA8171B264D00B973E9 /* basn4a08.png */,
+				65736DA9171B264D00B973E9 /* basn4a16.png */,
+				65736DAA171B264D00B973E9 /* basn6a08.png */,
+				65736DAB171B264D00B973E9 /* basn6a16.png */,
+				65736DAC171B264D00B973E9 /* ftbbn0g01.png */,
+				65736DAD171B264D00B973E9 /* ftbbn0g02.png */,
+				65736DAE171B264D00B973E9 /* ftbbn0g04.png */,
+				65736DAF171B264D00B973E9 /* ftbbn2c16.png */,
+				65736DB0171B264D00B973E9 /* ftbbn3p08.png */,
+				65736DB1171B264D00B973E9 /* ftbgn2c16.png */,
+				65736DB2171B264D00B973E9 /* ftbgn3p08.png */,
+				65736DB3171B264D00B973E9 /* ftbrn2c08.png */,
+				65736DB4171B264D00B973E9 /* ftbwn0g16.png */,
+				65736DB5171B264D00B973E9 /* ftbwn3p08.png */,
+				65736DB6171B264D00B973E9 /* ftbyn3p08.png */,
+				65736DB7171B264D00B973E9 /* ftp0n0g08.png */,
+				65736DB8171B264D00B973E9 /* ftp0n2c08.png */,
+				65736DB9171B264D00B973E9 /* ftp0n3p08.png */,
+				65736DBA171B264D00B973E9 /* ftp1n3p08.png */,
+				65736DBB171B264D00B973E9 /* README */,
+			);
+			path = pngsuite;
+			sourceTree = "<group>";
+		};
+		65736DBD171B264D00B973E9 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				65736DBE171B264D00B973E9 /* checksum-icc.c */,
+				65736DBF171B264D00B973E9 /* chkfmt */,
+				65736DC0171B264D00B973E9 /* cvtcolor.c */,
+				65736DC1171B264D00B973E9 /* intgamma.sh */,
+				65736DC2171B264D00B973E9 /* makesRGB.c */,
+				65736DC3171B264D00B973E9 /* README.txt */,
+				65736DC4171B264D00B973E9 /* sRGB.h */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		65736DC5171B264D00B973E9 /* visupng */ = {
+			isa = PBXGroup;
+			children = (
+				65736DC6171B264D00B973E9 /* cexcept.h */,
+				65736DC7171B264D00B973E9 /* PngFile.c */,
+				65736DC8171B264D00B973E9 /* PngFile.h */,
+				65736DC9171B264D00B973E9 /* README.txt */,
+				65736DCA171B264D00B973E9 /* resource.h */,
+				65736DCB171B264D00B973E9 /* VisualPng.c */,
+				65736DCC171B264D00B973E9 /* VisualPng.dsp */,
+				65736DCD171B264D00B973E9 /* VisualPng.dsw */,
+				65736DCE171B264D00B973E9 /* VisualPng.ico */,
+				65736DCF171B264D00B973E9 /* VisualPng.png */,
+				65736DD0171B264D00B973E9 /* VisualPng.rc */,
+			);
+			path = visupng;
+			sourceTree = "<group>";
+		};
+		65736E25171B264E00B973E9 /* projects */ = {
+			isa = PBXGroup;
+			children = (
+				65736E26171B264E00B973E9 /* owatcom */,
+				65736E2D171B264E00B973E9 /* visualc71 */,
+				65736E35171B264E00B973E9 /* vstudio */,
+			);
+			path = projects;
+			sourceTree = "<group>";
+		};
+		65736E26171B264E00B973E9 /* owatcom */ = {
+			isa = PBXGroup;
+			children = (
+				65736E27171B264E00B973E9 /* libpng.tgt */,
+				65736E28171B264E00B973E9 /* libpng.wpj */,
+				65736E29171B264E00B973E9 /* pngconfig.mak */,
+				65736E2A171B264E00B973E9 /* pngstest.tgt */,
+				65736E2B171B264E00B973E9 /* pngtest.tgt */,
+				65736E2C171B264E00B973E9 /* pngvalid.tgt */,
+			);
+			path = owatcom;
+			sourceTree = "<group>";
+		};
+		65736E2D171B264E00B973E9 /* visualc71 */ = {
+			isa = PBXGroup;
+			children = (
+				65736E2E171B264E00B973E9 /* libpng.sln */,
+				65736E2F171B264E00B973E9 /* libpng.vcproj */,
+				65736E30171B264E00B973E9 /* pngtest.vcproj */,
+				65736E31171B264E00B973E9 /* PRJ0041.mak */,
+				65736E32171B264E00B973E9 /* README.txt */,
+				65736E33171B264E00B973E9 /* README_zlib.txt */,
+				65736E34171B264E00B973E9 /* zlib.vcproj */,
+			);
+			path = visualc71;
+			sourceTree = "<group>";
+		};
+		65736E35171B264E00B973E9 /* vstudio */ = {
+			isa = PBXGroup;
+			children = (
+				65736E36171B264E00B973E9 /* libpng */,
+				65736E38171B264E00B973E9 /* pnglibconf */,
+				65736E3A171B264E00B973E9 /* pngstest */,
+				65736E3C171B264E00B973E9 /* pngtest */,
+				65736E3E171B264E00B973E9 /* pngunknown */,
+				65736E40171B264E00B973E9 /* pngvalid */,
+				65736E42171B264E00B973E9 /* readme.txt */,
+				65736E43171B264E00B973E9 /* vstudio.sln */,
+				65736E44171B264E00B973E9 /* WARNING */,
+				65736E45171B264E00B973E9 /* zlib */,
+				65736E47171B264E00B973E9 /* zlib.props */,
+			);
+			path = vstudio;
+			sourceTree = "<group>";
+		};
+		65736E36171B264E00B973E9 /* libpng */ = {
+			isa = PBXGroup;
+			children = (
+				65736E37171B264E00B973E9 /* libpng.vcxproj */,
+			);
+			path = libpng;
+			sourceTree = "<group>";
+		};
+		65736E38171B264E00B973E9 /* pnglibconf */ = {
+			isa = PBXGroup;
+			children = (
+				65736E39171B264E00B973E9 /* pnglibconf.vcxproj */,
+			);
+			path = pnglibconf;
+			sourceTree = "<group>";
+		};
+		65736E3A171B264E00B973E9 /* pngstest */ = {
+			isa = PBXGroup;
+			children = (
+				65736E3B171B264E00B973E9 /* pngstest.vcxproj */,
+			);
+			path = pngstest;
+			sourceTree = "<group>";
+		};
+		65736E3C171B264E00B973E9 /* pngtest */ = {
+			isa = PBXGroup;
+			children = (
+				65736E3D171B264E00B973E9 /* pngtest.vcxproj */,
+			);
+			path = pngtest;
+			sourceTree = "<group>";
+		};
+		65736E3E171B264E00B973E9 /* pngunknown */ = {
+			isa = PBXGroup;
+			children = (
+				65736E3F171B264E00B973E9 /* pngunknown.vcxproj */,
+			);
+			path = pngunknown;
+			sourceTree = "<group>";
+		};
+		65736E40171B264E00B973E9 /* pngvalid */ = {
+			isa = PBXGroup;
+			children = (
+				65736E41171B264E00B973E9 /* pngvalid.vcxproj */,
+			);
+			path = pngvalid;
+			sourceTree = "<group>";
+		};
+		65736E45171B264E00B973E9 /* zlib */ = {
+			isa = PBXGroup;
+			children = (
+				65736E46171B264E00B973E9 /* zlib.vcxproj */,
+			);
+			path = zlib;
+			sourceTree = "<group>";
+		};
+		65736E49171B264E00B973E9 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				65736E4A171B264E00B973E9 /* checksym.awk */,
+				65736E4B171B264E00B973E9 /* def.dfn */,
+				65736E4C171B264E00B973E9 /* descrip.mms */,
+				65736E4D171B264E00B973E9 /* dfn.awk */,
+				65736E4E171B264E00B973E9 /* intprefix.dfn */,
+				65736E4F171B264E00B973E9 /* libpng-config-body.in */,
+				65736E50171B264E00B973E9 /* libpng-config-head.in */,
+				65736E51171B264E00B973E9 /* libpng.pc.in */,
+				65736E52171B264E00B973E9 /* libtool.m4 */,
+				65736E53171B264E00B973E9 /* ltoptions.m4 */,
+				65736E54171B264E00B973E9 /* ltsugar.m4 */,
+				65736E55171B264E00B973E9 /* ltversion.m4 */,
+				65736E56171B264E00B973E9 /* lt~obsolete.m4 */,
+				65736E57171B264E00B973E9 /* macro.lst */,
+				65736E58171B264E00B973E9 /* makefile.32sunu */,
+				65736E59171B264E00B973E9 /* makefile.64sunu */,
+				65736E5A171B264E00B973E9 /* makefile.acorn */,
+				65736E5B171B264E00B973E9 /* makefile.aix */,
+				65736E5C171B264E00B973E9 /* makefile.amiga */,
+				65736E5D171B264E00B973E9 /* makefile.atari */,
+				65736E5E171B264E00B973E9 /* makefile.bc32 */,
+				65736E5F171B264E00B973E9 /* makefile.beos */,
+				65736E60171B264E00B973E9 /* makefile.bor */,
+				65736E61171B264E00B973E9 /* makefile.cegcc */,
+				65736E62171B264E00B973E9 /* makefile.darwin */,
+				65736E63171B264E00B973E9 /* makefile.dec */,
+				65736E64171B264E00B973E9 /* makefile.dj2 */,
+				65736E65171B264E00B973E9 /* makefile.elf */,
+				65736E66171B264E00B973E9 /* makefile.freebsd */,
+				65736E67171B264E00B973E9 /* makefile.gcc */,
+				65736E68171B264E00B973E9 /* makefile.hp64 */,
+				65736E69171B264E00B973E9 /* makefile.hpgcc */,
+				65736E6A171B264E00B973E9 /* makefile.hpux */,
+				65736E6B171B264E00B973E9 /* makefile.ibmc */,
+				65736E6C171B264E00B973E9 /* makefile.intel */,
+				65736E6D171B264E00B973E9 /* makefile.knr */,
+				65736E6E171B264E00B973E9 /* makefile.linux */,
+				65736E6F171B264E00B973E9 /* makefile.mips */,
+				65736E70171B264E00B973E9 /* makefile.msc */,
+				65736E71171B264E00B973E9 /* makefile.msys */,
+				65736E72171B264E00B973E9 /* makefile.ne12bsd */,
+				65736E73171B264E00B973E9 /* makefile.netbsd */,
+				65736E74171B264E00B973E9 /* makefile.openbsd */,
+				65736E75171B264E00B973E9 /* makefile.sco */,
+				65736E76171B264E00B973E9 /* makefile.sggcc */,
+				65736E77171B264E00B973E9 /* makefile.sgi */,
+				65736E78171B264E00B973E9 /* makefile.so9 */,
+				65736E79171B264E00B973E9 /* makefile.solaris */,
+				65736E7A171B264E00B973E9 /* makefile.solaris-x86 */,
+				65736E7B171B264E00B973E9 /* makefile.std */,
+				65736E7C171B264E00B973E9 /* makefile.sunos */,
+				65736E7D171B264E00B973E9 /* makefile.tc3 */,
+				65736E7E171B264E00B973E9 /* makefile.vcwin32 */,
+				65736E7F171B264E00B973E9 /* makevms.com */,
+				65736E80171B264E00B973E9 /* options.awk */,
+				65736E81171B264E00B973E9 /* pnglibconf.dfa */,
+				65736E82171B264E00B973E9 /* pnglibconf.h.prebuilt */,
+				65736E83171B264E00B973E9 /* pnglibconf.mak */,
+				65736E84171B264E00B973E9 /* pngwin.rc */,
+				65736E85171B264E00B973E9 /* prefix.dfn */,
+				65736E86171B264E00B973E9 /* README.txt */,
+				65736E87171B264E00B973E9 /* SCOPTIONS.ppc */,
+				65736E88171B264E00B973E9 /* smakefile.ppc */,
+				65736E89171B264E00B973E9 /* sym.dfn */,
+				65736E8A171B264E00B973E9 /* sym.out */,
+				65736E8B171B264E00B973E9 /* symbols.def */,
+				65736E8C171B264E00B973E9 /* symbols.dfn */,
+				65736E8D171B264E00B973E9 /* vers.dfn */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		65736E90171B264E00B973E9 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				65736E91171B264E00B973E9 /* pngstest */,
+				65736E92171B264E00B973E9 /* pngstest-0g01 */,
+				65736E93171B264E00B973E9 /* pngstest-0g02 */,
+				65736E94171B264E00B973E9 /* pngstest-0g04 */,
+				65736E95171B264E00B973E9 /* pngstest-0g08 */,
+				65736E96171B264E00B973E9 /* pngstest-0g16 */,
+				65736E97171B264E00B973E9 /* pngstest-2c08 */,
+				65736E98171B264E00B973E9 /* pngstest-2c16 */,
+				65736E99171B264E00B973E9 /* pngstest-3p01 */,
+				65736E9A171B264E00B973E9 /* pngstest-3p02 */,
+				65736E9B171B264E00B973E9 /* pngstest-3p04 */,
+				65736E9C171B264E00B973E9 /* pngstest-3p08 */,
+				65736E9D171B264E00B973E9 /* pngstest-4a08 */,
+				65736E9E171B264E00B973E9 /* pngstest-4a16 */,
+				65736E9F171B264E00B973E9 /* pngstest-6a08 */,
+				65736EA0171B264E00B973E9 /* pngstest-6a16 */,
+				65736EA1171B264E00B973E9 /* pngstest-error */,
+				65736EA2171B264E00B973E9 /* pngtest */,
+				65736EA3171B264E00B973E9 /* pngunknown-discard */,
+				65736EA4171B264E00B973E9 /* pngunknown-IDAT */,
+				65736EA5171B264E00B973E9 /* pngunknown-if-safe */,
+				65736EA6171B264E00B973E9 /* pngunknown-sAPI */,
+				65736EA7171B264E00B973E9 /* pngunknown-save */,
+				65736EA8171B264E00B973E9 /* pngunknown-sTER */,
+				65736EA9171B264E00B973E9 /* pngunknown-vpAg */,
+				65736EAA171B264E00B973E9 /* pngvalid-gamma-16-to-8 */,
+				65736EAB171B264E00B973E9 /* pngvalid-gamma-alpha-mode */,
+				65736EAC171B264E00B973E9 /* pngvalid-gamma-background */,
+				65736EAD171B264E00B973E9 /* pngvalid-gamma-expand16-alpha-mode */,
+				65736EAE171B264E00B973E9 /* pngvalid-gamma-expand16-background */,
+				65736EAF171B264E00B973E9 /* pngvalid-gamma-expand16-transform */,
+				65736EB0171B264E00B973E9 /* pngvalid-gamma-sbit */,
+				65736EB1171B264E00B973E9 /* pngvalid-gamma-threshold */,
+				65736EB2171B264E00B973E9 /* pngvalid-gamma-transform */,
+				65736EB3171B264E00B973E9 /* pngvalid-progressive-interlace-size */,
+				65736EB4171B264E00B973E9 /* pngvalid-progressive-interlace-standard */,
+				65736EB5171B264E00B973E9 /* pngvalid-progressive-interlace-transform */,
+				65736EB6171B264E00B973E9 /* pngvalid-progressive-standard */,
+				65736EB7171B264E00B973E9 /* pngvalid-standard */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		65F1EFAC171B222E00631BCA = {
+			isa = PBXGroup;
+			children = (
+				65736D1B171B264D00B973E9 /* libpng-1.6.1 */,
+				65736EBF171B2D8B00B973E9 /* common.h */,
+				65AFFAD7171B22EE001F555E /* bc2pngs.cpp */,
+				65736EBD171B2D4400B973E9 /* bin2bcs.cpp */,
+				65736EE8171BADEF00B973E9 /* bcs2pngs.sh */,
+				65736EE9171BB97A00B973E9 /* DATA001.BIN */,
+				65736EBC171B2BD200B973E9 /* DATA002.BIN */,
+				65736EBA171B275300B973E9 /* test.bc */,
+				65F1EFB8171B222E00631BCA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65F1EFB8171B222E00631BCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65736EC4171BA26B00B973E9 /* bin2bcs */,
+				65736EE6171BADBF00B973E9 /* bc2pngs */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65736EC3171BA26B00B973E9 /* bin2bcs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65736ECB171BA26B00B973E9 /* Build configuration list for PBXNativeTarget "bin2bcs" */;
+			buildPhases = (
+				65736EC0171BA26B00B973E9 /* Sources */,
+				65736EC1171BA26B00B973E9 /* Frameworks */,
+				65736EC2171BA26B00B973E9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bin2bcs;
+			productName = bin2bcs;
+			productReference = 65736EC4171BA26B00B973E9 /* bin2bcs */;
+			productType = "com.apple.product-type.tool";
+		};
+		65736EDC171BADBF00B973E9 /* bc2pngs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65736EE3171BADBF00B973E9 /* Build configuration list for PBXNativeTarget "bc2pngs" */;
+			buildPhases = (
+				65736EDD171BADBF00B973E9 /* Sources */,
+				65736EDF171BADBF00B973E9 /* Frameworks */,
+				65736EE1171BADBF00B973E9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bc2pngs;
+			productName = bc2png;
+			productReference = 65736EE6171BADBF00B973E9 /* bc2pngs */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65F1EFAE171B222E00631BCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = l4play;
+			};
+			buildConfigurationList = 65F1EFB1171B222E00631BCA /* Build configuration list for PBXProject "PADE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 65F1EFAC171B222E00631BCA;
+			productRefGroup = 65F1EFB8171B222E00631BCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65736EC3171BA26B00B973E9 /* bin2bcs */,
+				65736EDC171BADBF00B973E9 /* bc2pngs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65736EC0171BA26B00B973E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65736ECE171BA27900B973E9 /* bin2bcs.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65736EDD171BADBF00B973E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65736EDE171BADBF00B973E9 /* bc2pngs.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		65736ECC171BA26B00B973E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		65736ECD171BA26B00B973E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		65736EE4171BADBF00B973E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libpng-1.6.1/.libs\"",
+				);
+				PRODUCT_NAME = bc2pngs;
+			};
+			name = Debug;
+		};
+		65736EE5171BADBF00B973E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libpng-1.6.1/.libs\"",
+				);
+				PRODUCT_NAME = bc2pngs;
+			};
+			name = Release;
+		};
+		65F1EFBF171B222E00631BCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "libpng-1.6.1";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		65F1EFC0171B222E00631BCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "libpng-1.6.1";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65736ECB171BA26B00B973E9 /* Build configuration list for PBXNativeTarget "bin2bcs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65736ECC171BA26B00B973E9 /* Debug */,
+				65736ECD171BA26B00B973E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		65736EE3171BADBF00B973E9 /* Build configuration list for PBXNativeTarget "bc2pngs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65736EE4171BADBF00B973E9 /* Debug */,
+				65736EE5171BADBF00B973E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65F1EFB1171B222E00631BCA /* Build configuration list for PBXProject "PADE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65F1EFBF171B222E00631BCA /* Debug */,
+				65F1EFC0171B222E00631BCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65F1EFAE171B222E00631BCA /* Project object */;
+}
