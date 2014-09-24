@@ -16,7 +16,7 @@
 
 #include "common.h"
 
-#define BLOCK_SIZE 512
+#define BLOCK_SIZE 16
 
 using namespace std;
 
@@ -43,10 +43,10 @@ void process_bin_file(char *file_name) {
 	}
     fseek(fp, 0, SEEK_END);
     long file_size = ftell(fp);
-    fseek(fp, 0, SEEK_SET);
-    if (file_size % 512) {
+    if (file_size % BLOCK_SIZE) {
         abort_("[read_bin_file] File %s bad size", file_name);
     }
+    fseek(fp, 0, SEEK_SET);
     Block block;
     block.resize(BLOCK_SIZE);
     BlockList blockList;

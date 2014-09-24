@@ -30,10 +30,11 @@ enum TEXTURE_TYPE {
     TEXTURE_TYPE_RGB565 = 2, // OK
     TEXTURE_TYPE_RGBA4444 = 3, // OK
     TEXTURE_TYPE_RGB5A1 = 4, // OK
-    TEXTURE_TYPE_I8 = 8,    // NOT SURE
-    TEXTURE_TYPE_A8 = 9,    // NOT SURE
-    TEXTURE_TYPE_PVRTC4 = 11, // UNDONE
-    TEXTURE_TYPE_JPG = 13
+    TEXTURE_TYPE_I8 = 8,    // OK?
+    TEXTURE_TYPE_A8 = 9,    // OK?
+    TEXTURE_TYPE_PVRTC4 = 11, // OK?
+    TEXTURE_TYPE_PVRTC2 = 12, // OK?
+    TEXTURE_TYPE_JPG = 13 // OK
 };
 
 int file_count;
@@ -156,21 +157,11 @@ void write_png_file(const TextureInfo &info)
     fclose(fp);
 }
 
-void process_bc_file(char *file_name) 
+void process_tex1(char *file_name, long file_size, FILE *fp)
 {
-	unsigned char fcc[4];
-	FILE *fp = fopen(file_name, "rb");
-	if (!fp) {
-		abort_("[process_bc_file] File %s cound not be opened for reading", file_name);
-	}
-    cout << "Processing " << file_name << " ..." << endl;
-	fread(fcc, 1, 4, fp);
-	if (memcmp(&fcc, FCC_TEX1, sizeof(fcc))) {
-		abort_("[process_bc_file] File %s is not recognized as a BC file", file_name);
-	}
-	fread(&file_count, 1, 4, fp);
-	unsigned char unknown8[8];
-	fread(unknown8, 1, 8, fp);
+    fread(&file_count, 1, 4, fp);
+    unsigned char unknown8[8];
+    fread(unknown8, 1, 8, fp);
     for (int i=0; i<file_count; ++i) {
         TextureInfo info;
         fread(&info, 1, sizeof(info), fp);
@@ -188,7 +179,12 @@ void process_bc_file(char *file_name)
         if (TEXTURE_TYPE_JPG == it->getType()) {
             TextureInfoList::const_iterator nextIt = it;
             nextIt ++;
-            raw_data_length = nextIt->offset - it->offset;
+            if (nextIt != TextureInfos.end()) {
+                raw_data_length = nextIt->offset - it->offset;
+            }
+            else {
+                raw_data_length = file_size - it->offset;
+            }
             raw_data = (unsigned char *)malloc(raw_data_length);
             if (raw_data_length != fread(raw_data, 1, raw_data_length, fp)) {
                 abort_("[process_bc_file] Read data error from file: %s", file_name);
@@ -197,6 +193,14 @@ void process_bc_file(char *file_name)
         }
         else if (TEXTURE_TYPE_PVRTC4 == it->getType()) {
             raw_data_length = it->getWidth() * it->getHeight() / 2;
+            raw_data = (unsigned char *)malloc(raw_data_length);
+            if (raw_data_length != fread(raw_data, 1, raw_data_length, fp)) {
+                abort_("[process_bc_file] Read data error from file: %s", file_name);
+            }
+            write_pvr_file(*it);
+        }
+        else if (TEXTURE_TYPE_PVRTC2 == it->getType()) {
+            raw_data_length = it->getWidth() * it->getHeight() * 2 / 8 + 64;
             raw_data = (unsigned char *)malloc(raw_data_length);
             if (raw_data_length != fread(raw_data, 1, raw_data_length, fp)) {
                 abort_("[process_bc_file] Read data error from file: %s", file_name);
@@ -270,7 +274,7 @@ void process_bc_file(char *file_name)
                         }
                         break;
                     default:
-                        abort_("[process_bc_file] Unknown texture type: %d, file: %s, texture: %s", it->getType(), file_name, it->name);
+                        abort_("[process_bc_file] Unknown texture: %s", it->toString().c_str());
                         break;
                 }
                 if (row_data) {
@@ -280,6 +284,35 @@ void process_bc_file(char *file_name)
             }
             write_png_file(*it);
         }
+    }
+}
+
+void process_tex2(char *file_name, long file_size, FILE *fp)
+{
+    process_tex1(file_name, file_size, fp);
+}
+
+void process_bc_file(char *file_name) 
+{
+	unsigned char fcc[4];
+    cout << "Processing " << file_name << " ..." << endl;
+    FILE *fp = fopen(file_name, "rb");
+    if (!fp) {
+        abort_("[process_bc_file] File %s cound not be opened for reading", file_name);
+    }
+    fseek(fp, 0, SEEK_END);
+    long file_size = ftell(fp);    
+    fseek(fp, 0, SEEK_SET);
+    
+	fread(fcc, 1, 4, fp);
+    if (0 == memcmp(&fcc, FCC_TEX1, sizeof(fcc))) {
+        process_tex1(file_name, file_size, fp);
+    }
+    else if (0 == memcmp(&fcc, FCC_TEX2, sizeof(fcc))) {
+        process_tex2(file_name, file_size, fp);
+    }
+    else {
+        abort_("[process_bc_file] File %s is not recognized as a BC file, unknown FCC: %c%c%c%c", file_name, fcc[0], fcc[1], fcc[2], fcc[3]);
     }
     cout << "Done" << endl;
 }

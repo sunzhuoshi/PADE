@@ -13,6 +13,7 @@
 #include <stdarg.h>
 
 #define FCC_TEX1 "TEX1"
+#define FCC_TEX2 "TEX2"
 
 void abort_(const char * s, ...)
 {
